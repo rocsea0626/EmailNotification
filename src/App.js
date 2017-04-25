@@ -19,7 +19,7 @@ class App extends Component {
                 <Content/>
                 <RegisterForm/>
                 <SendForm/>
-                <ContactsList emailsList={this.props.emailsList} />
+                <ContactsList emailsList={this.props.emailsList}/>
             </div>
         );
     }
@@ -76,10 +76,6 @@ class RegisterForm extends React.Component {
         console.log("_handleSelectGroupChange(), group=" + JSON.stringify(this.state));
     }
 
-    _handleCallback() {
-        console.log("_handleCallback()");
-    }
-
     _handleRegister() {
         var data = {};
 
@@ -90,10 +86,10 @@ class RegisterForm extends React.Component {
         console.log("_handleRegister(), data=" + JSON.stringify(data));
 
         var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = function () {
             console.log("this.readyState=" + this.readyState + ", this.status=" + this.status)
             if (this.readyState === 4 && this.status === 200) {
-                this._handleCallback();
+                console.log("Registered");
             }
         }
         var url = 'https://5n5wuzh96g.execute-api.us-east-1.amazonaws.com/dev/users';
@@ -111,7 +107,6 @@ class RegisterForm extends React.Component {
                 <form>
                     <select value={this.state.group} onChange={this._handleSelectGroupChange}>
                         <option value="basketball">Basketball</option>
-                        <option value="new">New</option>
                     </select>
                     <br/>
                     User name:
@@ -128,17 +123,87 @@ class RegisterForm extends React.Component {
 }
 
 class SendForm extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            group: "basketball",
+            message: "",
+            httpReqState:"",
+        };
+
+        this._handleSelectGroupChange = this._handleSelectGroupChange.bind(this);
+        this._handleSendMessage = this._handleSendMessage.bind(this);
+        this._handleTextChange = this._handleTextChange.bind(this);
+        this._setState = this._setState.bind(this);
+    }
+
+    _handleSelectGroupChange(event) {
+        this.setState({group: event.target.value});
+        console.log("_handleSelectGroupChange(), state=" + JSON.stringify(this.state));
+    }
+
+    _handleSendMessage(event, callback) {
+
+        var data = {};
+
+        data.group = this.state.group;
+        data.message = this.state.message;
+        data.subject = this.refs.subject.value;
+
+        console.log("_handleSendMessage(), data=" + JSON.stringify(data));
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            console.log("this.readyState=" + this.readyState + ", this.status=" + this.status);
+            if (this.readyState === 4 && this.status === 200) {
+                callback("COMPLETED");
+            } else {
+                callback("FAILED");
+            }
+        };
+
+        var url = 'https://5n5wuzh96g.execute-api.us-east-1.amazonaws.com/dev/topics';
+        xhttp.open("POST", url, true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send(JSON.stringify(data));
+        this._setState("SENDING...");
+        event.preventDefault();
+
+    }
+
+    _handleTextChange(event) {
+        this.setState({message: event.target.value});
+    }
+
+    _setState(state){
+        console.log("_setState(state=%s)", JSON.stringify(state));
+        this.setState({httpReqState: state});
+    }
+
     render() {
         return (
             <fieldset>
                 <legend>Send message to a group</legend>
-                <form>
+                <form onSubmit={(e)=>this._handleSendMessage(e, this._setState)}>
                     Group:<br/>
-                    <input type="text" name="username"/> <br/>
-                    Message:<br/>
-                    <textarea name="message" rows="10" cols="30" defaultValue="Your message to group">
-                    </textarea>
+                    <select value={this.state.group} onChange={this._handleSelectGroupChange}>
+                        <option value="basketball">Basketball</option>
+                    </select>
                     <br/>
+                    Subject:
+                    <br/>
+                    <input type="text" ref="subject" placeholder="Next game time"/>
+                    <br/>
+                    <label>
+                        Message: <br/>
+                        <textarea rows="10" cols="30" value={this.state.value} placeholder="Your message to group"
+                                  onChange={this._handleTextChange}/>
+                    </label>
+                    <br/>
+                    <div>
+                        <span>{this.state.httpReqState}</span>
+                    </div>
                     <input type="submit" value="Send"/>
                 </form>
             </fieldset>

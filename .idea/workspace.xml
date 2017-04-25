@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/App.js" line="204" mnemonic="9" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ee0ca510-3ad8-4058-9ee9-00a1bce5f03a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +24,13 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< 4eca83a7f23853e655b8745a3d8a2898be700ce7
             <state relative-caret-position="269">
               <caret line="110" column="22" lean-forward="false" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
+=======
+            <state relative-caret-position="626">
+              <caret line="163" column="10" lean-forward="true" selection-start-line="163" selection-start-column="10" selection-end-line="163" selection-end-column="10" />
+>>>>>>> make everything work
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -134,8 +142,17 @@
       <find>App.js</find>
       <find>userid</find>
       <find>POST</find>
+<<<<<<< 4eca83a7f23853e655b8745a3d8a2898be700ce7
       <find>///</find>
       <find>&gt;&gt;&gt;&gt;</find>
+=======
+      <find>createtable</find>
+      <find>yearscan</find>
+      <find>ExpressionAttributeNames</find>
+      <find>this.ref</find>
+      <find>_handleSendMessage</find>
+      <find>setState</find>
+>>>>>>> make everything work
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/components/Contact.js" />
         <option value="$PROJECT_DIR$/src/components/ContactsList.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$USER_HOME$/Downloads/MoviesJavaScript.html" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
@@ -337,12 +355,17 @@
       <workItem from="1491206014110" duration="1568000" />
       <workItem from="1491222659997" duration="23641000" />
       <workItem from="1491481867314" duration="3362000" />
-      <workItem from="1492084191513" duration="10287000" />
+      <workItem from="1492084191513" duration="19158000" />
+      <workItem from="1493037487521" duration="8953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< 4eca83a7f23853e655b8745a3d8a2898be700ce7
     <option name="totallyTimeSpent" value="43299000" />
+=======
+    <option name="totallyTimeSpent" value="61089000" />
+>>>>>>> make everything work
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="23" width="2560" height="1053" extended-state="6" />
@@ -639,6 +662,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2190">
+          <caret line="146" column="22" lean-forward="true" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/MoviesJavaScript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -883,6 +942,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -893,18 +960,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Contact.js">
+    <entry file="file://$USER_HOME$/Downloads/MoviesJavaScript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="285">
+          <caret line="87" column="14" lean-forward="true" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< 4eca83a7f23853e655b8745a3d8a2898be700ce7
         <state relative-caret-position="269">
           <caret line="110" column="22" lean-forward="false" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
+=======
+        <state relative-caret-position="626">
+          <caret line="163" column="10" lean-forward="true" selection-start-line="163" selection-start-column="10" selection-end-line="163" selection-end-column="10" />
+>>>>>>> make everything work
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
